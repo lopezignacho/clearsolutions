@@ -48,7 +48,7 @@
       <div class="container-fluid">
   
         <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">ClearITSolutions</a></h1>
+        <h1><a href="{% url 'home' %}" class="scrollto">ClearSolutions</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
         <!-- 
           <a href="#intro">
@@ -58,10 +58,42 @@
         </div>
   
         <nav id="nav-menu-container">
-          <ul class="nav-menu">
+          <ul class="nav-menu">          
             <li class="menu-active"><a href="#intro">Inicio</a></li>
             <li><a href="#about">Acerca de nosotros</a></li>
-            <!-- <li><a href="#services">Servicios</a></li> -->
+            <li class="menu-has-children"><a href="{% url 'servicios' %}">Servicios</a>
+              <ul>
+                <li class="menu-has-children"><a href="#">Servicios de Mantencion</a>
+              <ul>
+                <li><a href="#">Mantenimiento</a></li>
+                <li><a href="#">Actualización de Hardware</a></li>
+                <li><a href="#">Formateo y Reinstalación del Sistema Operativo</a></li>
+                <li><a href="#">Seguridad y Eliminación de Malware</a></li>
+                <li><a href="#">Copia de seguridad y recuperación</a></li>
+                <li><a href="#">Ensamblado de Computadoras Personalizadas</a></li>
+                <li><a href="#">Asistencia Remota</a></li>
+                <li><a href="#">Atención al Cliente</a></li>
+              </ul>
+
+            <li class="menu-has-children"><a href="#">Servicios Integrales</a>
+              <ul>
+              <li><a href="#">Asesorías TI</a></li>
+              <li><a href="#">Desarrollo Landing Page</a></li>
+              <!-- Agrega más subopciones aquí si es necesario -->
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        
+        <!--
+
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">          
+            <li class="menu-active"><a href="#intro">Inicio</a></li>
+            <li><a href="#about">Acerca de nosotros</a></li>
+            <li><a href="#services">Servicios</a></li>
             <li class="menu-has-children"><a href="">Servicios de mantención</a>
               <ul>
                 <li><a href="#">Mantenimiento</a></li>
@@ -73,16 +105,20 @@
                 <li><a href="#">Asistencia Remota</a></li>
                 <li><a href="#">Atención al Cliente</a></li>
               </ul>
-            </li>
+            </li>        
 
-            <li class="menu-has-children"><a href="">Servicios Integrales</a>
-              <ul>
-                <li><a href="#">Asesorías TI</a></li>
-                <li><a href="#">Desarrollo Landing Page</a></li>
-              </ul>
+            <li class="menu-has-children"><a href="#">Servicios Integrales</a>
+                  <ul>
+                      <li class="menu-has-children"><a href="#">Servicios Integrales</a>
+                      <ul>
+                      <li><a href="#">Asesorías TI</a></li>
+                      <li><a href="#">Desarrollo Landing Page</a></li>
+                      </ul>
+                  </ul>
             </li>
+          -->
             
-            <li><a href="{% url 'contacto' %}">Contactános</a></li>
+            <li><a href="{% url 'contacto' %}">Contáctenos</a></li>
           </ul>
         </nav><!-- #nav-menu-container -->
       </div>
@@ -116,21 +152,23 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
+            <h4>Contacténos</h4>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
-              United States <br>
+              Chile <br>
               <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Email:</strong> clearsolutions@gmail.com<br>
             </p>
 
             <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/clearitsolutions/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+              <!--
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
               <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              -->
             </div>
 
           </div>
@@ -149,16 +187,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
-        -->
-        Best <a href="https://bootstrapmade.com/">Bootstrap Templates</a> by BootstrapMade
+        &copy; Copyright <strong>ClearSolutions</strong>. Todos los derechos reservados
       </div>
     </div>
   </footer><!-- #footer -->
@@ -186,6 +215,7 @@
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'app/js/main.js' %}"></script>
+
 
   {% endblock %}
 

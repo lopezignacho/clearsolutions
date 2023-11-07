@@ -78,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 #header.header-scrolled {
@@ -1193,6 +1194,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #contact {
   padding: 60px 0;
+  margin-top: 90px;
 }
 
 #contact .contact-info {
@@ -1456,4 +1458,32 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+
+
+
+/* Estilos generales para el video */
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos específicos para pantallas grandes (mayores de 768px) */
+@media (min-width: 769px) {
+  #video-small {
+    display: none; /* Oculta el video para dispositivos móviles */
+  }
+}
+
+/* Estilos específicos para dispositivos móviles (768px o menos) */
+@media (max-width: 768px) {
+  #video-large {
+    display: none; /* Oculta el video para pantallas grandes */
+  }
+}
+
+
+#services-gallery{
+  margin-top: 92px;
+  padding: 50px;
 }
