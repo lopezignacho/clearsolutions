@@ -60,81 +60,37 @@
         </div>
   
         <nav id="nav-menu-container">
-          <ul class="nav-menu">          
-
-            {% if request.path == '/'  %}
-              <li class="menu-active"><a href="#intro">Inicio</a></li>
-            {% else %}
-              <li class="menu-active"><a href="{% url 'home' %}">Inicio</a></li>
-            {% endif %}
-            
-            <li class="menu-has-children"><a href="{% url 'servicios' %}">Servicios</a>
+          <ul class="nav-menu">
+            <li {% if request.path == '/' %}class="menu-active"{% endif %}><a href="{% url 'home' %}#intro">Inicio</a></li>
+            <li {% if request.path == '/servicios/' %}class="menu-active"{% endif %}><a href="{% url 'servicios' %}">Servicios</a>
               <ul>
                 <li class="menu-has-children"><a href="#">Servicios de Mantencion</a>
-              <ul>
-                <li><a href="#">Mantenimiento</a></li>
-                <li><a href="#">Actualización de Hardware</a></li>
-                <li><a href="#">Formateo y Reinstalación del Sistema Operativo</a></li>
-                <li><a href="#">Seguridad y Eliminación de Malware</a></li>
-                <li><a href="#">Copia de seguridad y recuperación</a></li>
-                <li><a href="#">Ensamblado de Computadoras Personalizadas</a></li>
-                <li><a href="#">Asistencia Remota</a></li>
-                <li><a href="#">Atención al Cliente</a></li>
-              </ul>
-
-            <li class="menu-has-children"><a href="#">Servicios Integrales</a>
-              <ul>
-              <li><a href="#">Asesorías TI</a></li>
-              <li><a href="#">Desarrollo Landing Page</a></li>
-              <!-- Agrega más subopciones aquí si es necesario -->
-              </ul>
-            </li>
-
-          </ul>
-        </li>
-
-        
-        <!--
-
-        <nav id="nav-menu-container">
-          <ul class="nav-menu">          
-            <li class="menu-active"><a href="#intro">Inicio</a></li>
-            <li><a href="#about">Acerca de nosotros</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li class="menu-has-children"><a href="">Servicios de mantención</a>
-              <ul>
-                <li><a href="#">Mantenimiento</a></li>
-                <li><a href="#">Actualización de Hardware</a></li>
-                <li><a href="#">Formateo y Reinstalación del Sistema Operativo</a></li>
-                <li><a href="#">Seguridad y Eliminación de Malware</a></li>
-                <li><a href="#">Copia de seguridad y recuperación</a></li>
-                <li><a href="#">Ensamblado de Computadoras Personalizadas</a></li>
-                <li><a href="#">Asistencia Remota</a></li>
-                <li><a href="#">Atención al Cliente</a></li>
-              </ul>
-            </li>        
-
-            <li class="menu-has-children"><a href="#">Servicios Integrales</a>
                   <ul>
-                      <li class="menu-has-children"><a href="#">Servicios Integrales</a>
-                      <ul>
-                      <li><a href="#">Asesorías TI</a></li>
-                      <li><a href="#">Desarrollo Landing Page</a></li>
-                      </ul>
+                    <li><a href="#">Mantenimiento</a></li>
+                    <li><a href="#">Actualización de Hardware</a></li>
+                    <li><a href="#">Formateo y Reinstalación del Sistema Operativo</a></li>
+                    <li><a href="#">Seguridad y Eliminación de Malware</a></li>
+                    <li><a href="#">Copia de seguridad y recuperación</a></li>
+                    <li><a href="#">Ensamblado de Computadoras Personalizadas</a></li>
+                    <li><a href="#">Asistencia Remota</a></li>
+                    <li><a href="#">Atención al Cliente</a></li>
                   </ul>
+                <li class="menu-has-children"><a href="#">Servicios Integrales</a>
+                  <ul>
+                    <li><a href="#">Asesorías TI</a></li>
+                    <li><a href="#">Desarrollo Landing Page</a></li>
+                  </ul>
+                </li>
+              </ul>
             </li>
-          -->
-            
-            <li><a href="#about">Acerca de nosotros</a></li>
-            <li><a href="{% url 'contacto' %}">Contáctenos</a></li>
+            <li><a href="{% url 'home' %}#about">Acerca de Nosotros</a></li>
+            <li {% if request.path == '/contacto/' %}class="menu-active"{% endif %}><a href="{% url 'contacto' %}">Contáctenos</a></li>
           </ul>
         </nav><!-- #nav-menu-container -->
       </div>
     </header><!-- #header -->
-    
-      
 
-
+ 
   <!--==========================
     Footer
   ============================-->
