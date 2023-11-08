@@ -59,14 +59,12 @@
   
         <nav id="nav-menu-container">
           <ul class="nav-menu">          
-            
 
             {% if request.path == '/'  %}
               <li class="menu-active"><a href="#intro">Inicio</a></li>
             {% else %}
               <li class="menu-active"><a href="{% url 'home' %}">Inicio</a></li>
             {% endif %}
-            
             
             <li class="menu-has-children"><a href="{% url 'servicios' %}">Servicios</a>
               <ul>
