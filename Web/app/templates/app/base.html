@@ -8,15 +8,15 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="static/app/img/favicon.png" rel="icon">
+  <link href="static/app/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   {% load static %}
   <!-- Bootstrap CSS File -->
-  <link href="{% static 'app/lib/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'app/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
   <link href="{% static 'app/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
@@ -59,8 +59,15 @@
   
         <nav id="nav-menu-container">
           <ul class="nav-menu">          
-            <li class="menu-active"><a href="#intro">Inicio</a></li>
-            <li><a href="#about">Acerca de nosotros</a></li>
+            
+
+            {% if request.path == '/'  %}
+              <li class="menu-active"><a href="#intro">Inicio</a></li>
+            {% else %}
+              <li class="menu-active"><a href="{% url 'home' %}">Inicio</a></li>
+            {% endif %}
+            
+            
             <li class="menu-has-children"><a href="{% url 'servicios' %}">Servicios</a>
               <ul>
                 <li class="menu-has-children"><a href="#">Servicios de Mantencion</a>
@@ -118,6 +125,7 @@
             </li>
           -->
             
+            <li><a href="#about">Acerca de nosotros</a></li>
             <li><a href="{% url 'contacto' %}">Contáctenos</a></li>
           </ul>
         </nav><!-- #nav-menu-container -->
