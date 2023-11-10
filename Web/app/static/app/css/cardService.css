@@ -3,14 +3,14 @@
 body {
   font-family: "Baloo 2", cursive;
   font-size: 16px;
-  color: #ffffff;
+  color: #343a40;
   text-rendering: optimizeLegibility;
   font-weight: initial;
 }
 
 .dark {
   margin-top: 92px;
-  background: #110f16;
+  background: #f3f5f7;
 }
 
 .light {

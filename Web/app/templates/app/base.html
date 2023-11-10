@@ -59,21 +59,27 @@
         -->
         </div>
   
+
+
+
+
         <nav id="nav-menu-container">
           <ul class="nav-menu">
             <li {% if request.path == '/' %}class="menu-active"{% endif %}><a href="{% url 'home' %}#intro">Inicio</a></li>
-            <li {% if request.path == '/servicios/' %}class="menu-active"{% endif %}><a href="{% url 'servicios' %}">Servicios</a>
+
+            <li {% if request.path == '/servicios/' %} class="menu-has-children menu-active" {% endif %}>
+              <a href="{% url 'servicios' %}#servicios">Servicios</a>
               <ul>
                 <li class="menu-has-children"><a href="#">Servicios de Mantencion</a>
                   <ul>
-                    <li><a href="#">Mantenimiento</a></li>
-                    <li><a href="#">Actualización de Hardware</a></li>
-                    <li><a href="#">Formateo y Reinstalación del Sistema Operativo</a></li>
-                    <li><a href="#">Seguridad y Eliminación de Malware</a></li>
-                    <li><a href="#">Copia de seguridad y recuperación</a></li>
-                    <li><a href="#">Ensamblado de Computadoras Personalizadas</a></li>
-                    <li><a href="#">Asistencia Remota</a></li>
-                    <li><a href="#">Atención al Cliente</a></li>
+                    <li><a href="{% url 'servicios' %}#mantenimiento">Mantenimiento</a></li>
+                    <li><a href="{% url 'servicios' %}#hardware">Actualización de Hardware</a></li>
+                    <li><a href="{% url 'servicios' %}#so">Formateo y Reinstalación del Sistema Operativo</a></li>
+                    <li><a href="{% url 'servicios' %}#malware">Seguridad y Eliminación de Malware</a></li>
+                    <li><a href="{% url 'servicios' %}#recuperacion">Copia de seguridad y recuperación</a></li>
+                    <li><a href="{% url 'servicios' %}#ensamblado">Ensamblado de Computadoras Personalizadas</a></li>
+                    <li><a href="{% url 'servicios' %}#remote">Asistencia Remota</a></li>
+                    <li><a href="{% url 'servicios' %}#intro">Atención al Cliente</a></li>
                   </ul>
                 <li class="menu-has-children"><a href="#">Servicios Integrales</a>
                   <ul>
