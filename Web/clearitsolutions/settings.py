@@ -15,6 +15,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# Configuración para enviar correos electrónicos
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Cambiar al servidor SMTP que estés usando
+EMAIL_PORT = 587  # El puerto de tu servidor SMTP
+EMAIL_HOST_USER = 'patricio.antonio.salvo@gmail.com'  # Cambiar al correo que estás usando para enviar correos
+EMAIL_HOST_PASSWORD = 'gzbr jzra fglc phtr'  # Contraseña del correo electrónico
+EMAIL_USE_TLS = True  # O False si tu servidor SMTP no requiere TLS
 
 # Application definition
 
