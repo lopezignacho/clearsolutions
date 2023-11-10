@@ -67,7 +67,7 @@
           <ul class="nav-menu">
             <li {% if request.path == '/' %}class="menu-active"{% endif %}><a href="{% url 'home' %}#intro">Inicio</a></li>
 
-            <li {% if request.path == '/servicios/' %} class="menu-has-children menu-active" {% endif %}>
+            <li {% if request.path == '/servicios/' %} class="menu-has-children menu-active" {% else %} class="menu-has-children"{% endif %}>
               <a href="{% url 'servicios' %}#servicios">Servicios</a>
               <ul>
                 <li class="menu-has-children"><a href="#">Servicios de Mantencion</a>
@@ -89,8 +89,13 @@
                 </li>
               </ul>
             </li>
-            <li><a href="{% url 'home' %}#about">Acerca de Nosotros</a></li>
-            <li {% if request.path == '/contacto/' %}class="menu-active"{% endif %}><a href="{% url 'contacto' %}">Contáctenos</a></li>
+            <li {% if request.path == '/about/' %}class="menu-active"{% endif %}>
+              <a href="{% url 'about' %}">Acerca de Nosotros</a>
+            </li>
+
+            <li {% if request.path == '/contacto/' %}class="menu-active"{% endif %}>
+              <a href="{% url 'contacto' %}">Contáctenos</a>
+            </li>
           </ul>
         </nav><!-- #nav-menu-container -->
       </div>

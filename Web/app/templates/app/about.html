@@ -1,0 +1,77 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<!--==========================
+        About Us Section
+      ============================-->
+      <section id="about">
+        <div class="container">
+  
+          <header class="section-header">
+            <h3>¿Quiénes somos?</h3>
+            <p>En ClearSolutions, somos más que una empresa de reparación de computadoras y servicios informáticos. Somos tu aliado de confianza en el mundo digital. 
+              Fundada con una pasión por la tecnología y una misión clara de simplificar la vida de nuestros clientes, hemos estado brindando soluciones informáticas de primera calidad desde [año de fundación]. Nuestra dedicación a la excelencia y el compromiso con la satisfacción del cliente nos han convertido en líderes en el sector. 
+              Ya sea que seas un usuario doméstico que necesita una reparación rápida o una empresa que busca soluciones tecnológicas personalizadas, estamos aquí para ayudarte en cada paso del camino.
+              Confía en nosotros para ser tu socio tecnológico confiable. ¡Estamos aquí para ayudarte a triunfar en el mundo digital!
+          </p>
+          </header>
+  
+          <div class="row about-cols">
+  
+            <div class="col-md-4 wow fadeInUp">
+              <div class="about-col">
+                <div class="img">
+                  <img src="{% static 'app/img/about-mission.jpg' %}" alt="" class="img-fluid">
+                  <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                </div>
+                <h2 class="title"><a href="#">Nuestra Misión</a></h2>
+                <p>
+                  En ClearSolutions nuestra misión es simplificar la vida de nuestros clientes mediante soluciones informáticas de primera calidad. 
+                  Nos comprometemos a proporcionar servicios excepcionales y personalizados, tanto para usuarios domésticos como para empresas. 
+                  Nuestro enfoque constante en la excelencia y la satisfacción del cliente nos impulsa a ser líderes en el sector de la tecnología. 
+                  Estamos dedicados a ser el socio tecnológico confiable que necesitas para triunfar en el mundo digital.
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="about-col">
+                <div class="img">
+                  <img src="{% static 'app/img/about-plan.jpg' %}" alt="" class="img-fluid">
+                  <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                </div>
+                <h2 class="title"><a href="#">Nuestro Plan</a></h2>
+                <p>
+                  Ofrecer soluciones tecnológicas de alta calidad y personalizadas a nuestros clientes.
+                  Mantenernos actualizados con las últimas tendencias tecnológicas y avances en el sector.
+                  Priorizar la satisfacción del cliente a través de un servicio rápido, confiable y transparente.
+                  Expandir nuestro alcance para atender tanto a usuarios domésticos como a empresas de manera efectiva.
+                  Fomentar una cultura de innovación y excelencia en nuestro equipo para brindar servicios de vanguardia.
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="about-col">
+                <div class="img">
+                  <img src="{% static 'app/img/about-vision.jpg' %}" alt="" class="img-fluid">
+                  <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                </div>
+                <h2 class="title"><a href="#">Nuestra Visión</a></h2>
+                <p>
+                  Buscamos ser la primera opción para quienes necesiten apoyo tecnológico, ya sea a nivel doméstico o empresarial. 
+                  Queremos ser reconocidos por nuestra capacidad de simplificar la vida de nuestros clientes en un mundo digital en constante evolución. 
+                  Además, aspiramos a mantenernos como líderes en el sector al continuar ofreciendo servicios excepcionales y personalizados que impulsen el éxito de nuestros clientes en el mundo digital.
+                </p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- #about -->
+
+{% endblock %}
