@@ -10,7 +10,7 @@ body {
 
 .dark {
   margin-top: 92px;
-  background: #f3f5f7;
+  background: #110f16;
 }
 
 .light {
@@ -24,6 +24,7 @@ a:hover {
 }
 
 #pageHeaderTitle {
+  color: #fffbf8;
   margin: 2rem 0;
   text-transform: uppercase;
   text-align: center;

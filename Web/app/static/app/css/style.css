@@ -396,7 +396,7 @@ h1, h2, h3, h4, h5, h6 {
 #mobile-nav-toggle {
   position: fixed;
   right: 0;
-  top: 0;
+  top: 10px;
   z-index: 999;
   margin: 20px 20px 0 0;
   border: 0;
@@ -1203,6 +1203,26 @@ video {
   }
 }
 
+
+/* Estilos generales para imágenes */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos específicos para dispositivos móviles (768px o menos) */
+@media (max-width: 768px) {
+  .img-large {
+    display: none;
+  }
+}
+
+/* Estilos específicos para pantallas grandes (mayores de 768px) */
+@media (min-width: 769px) {
+  .img-small {
+    display: none;
+  }
+}
 
 #services-gallery{
   margin-top: 92px;
