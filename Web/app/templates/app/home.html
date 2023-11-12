@@ -11,31 +11,34 @@
             <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators"></ol>
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                      <div class="carousel-container">
-                        <div class="carousel-content">
-                            <!-- Video para pantallas grandes -->
-                            <video autoplay loop muted playsinline id="video-large" poster="{% static 'app/img/intro-carousel/video-2-poster.jpg' %}">
-                                <source src="{% static 'app/img/intro-carousel/video-2.mp4' %}" type="video/mp4">
-                            </video>
-  
-                            <!-- Video para dispositivos móviles -->
-                            <video autoplay loop muted playsinline id="video-small" poster="{% static 'app/img/intro-carousel/historia-poster.jpg' %}">
-                                <source src="{% static 'app/img/intro-carousel/historia.mp4' %}" type="video/mp4">
-                            </video>
-                        </div>
-                      </div>
+                  
+                  <div class="carousel-item active">
+                    <div class="carousel-container">
+                      <!-- Imagen para pantallas grandes (desktop) -->
+                      <img class="img-large" srcset="{% static 'app/img/intro-carousel/4.jpg' %}" alt="Descripción de la imagen para pantallas grandes"></img>
+                  
+                      <!-- Imagen para dispositivos móviles -->
+                      <img class="img-small" srcset="{% static 'app/img/intro-carousel/4-mobile.jpg' %}" alt="Descripción de la imagen para dispositivos móviles"></img>
                     </div>
+                  </div>
 
-                    <div class="carousel-item">
-                      <div class="carousel-container">
-                        <!-- Imagen para pantallas grandes (desktop) -->
-                        <img class="img-large" srcset="{% static 'app/img/intro-carousel/4.jpg' %}" alt="Descripción de la imagen para pantallas grandes"></img>
-                    
-                        <!-- Imagen para dispositivos móviles -->
-                        <img class="img-small" srcset="{% static 'app/img/intro-carousel/4-mobile.jpg' %}" alt="Descripción de la imagen para dispositivos móviles"></img>
+                  <div class="carousel-item">
+                    <div class="carousel-container">
+                      <div class="carousel-content">
+                          <!-- Video para pantallas grandes -->
+                          <video autoplay loop muted playsinline id="video-large" poster="{% static 'app/img/intro-carousel/video-2-poster.jpg' %}">
+                              <source src="{% static 'app/img/intro-carousel/video-2.mp4' %}" type="video/mp4">
+                          </video>
+
+                          <!-- Video para dispositivos móviles -->
+                          <video autoplay loop muted playsinline id="video-small" poster="{% static 'app/img/intro-carousel/historia-poster.jpg' %}">
+                              <source src="{% static 'app/img/intro-carousel/historia.mp4' %}" type="video/mp4">
+                          </video>
                       </div>
                     </div>
+                  </div>
+
+
                                                                      
                     <div class="carousel-item" style="background-image: url({% static 'app/img/intro-carousel/1.jpg' %});">
                         <div class="carousel-container">
