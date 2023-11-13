@@ -49,14 +49,19 @@
     <header id="header">
       <div class="container-fluid">
   
-        <div id="logo" class="pull-left">
-        <h1><a href="{% url 'home' %}" class="scrollto">ClearSolutions</a></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- 
-          <a href="#intro">
-            <img src="{% static 'app/img/logo.png' %}" alt="" title="" />
-          </a> 
-        -->
+        <div id="logo" class="pull-left logo">
+        
+         
+          <div class="container logoImg">
+            <a href="#intro">
+              <img src="{% static 'app/img/logo.png' %}" alt="" title="" />
+            </a> 
+          </div>
+
+          <div class="container logoTxt">
+            <h1><a href="{% url 'home' %}" class="scrollto">ClearIT</a></h1>
+          </div>
+        
         </div>
   
 

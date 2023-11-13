@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  padding: 30px 0;
+  padding: 18px 0;
   height: 92px;
   position: fixed;
   left: 0;
@@ -334,6 +334,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1024px) {
   #nav-menu-container {
     padding-right: 150px;
+    margin-top: 15px;
   }
 }
 
@@ -1227,4 +1228,32 @@ img {
 #services-gallery{
   margin-top: 92px;
   padding: 50px;
+}
+
+.logo {
+  overflow: hidden; /* Clearfix para contener elementos flotantes */
+}
+
+.logoTxt {
+  float: left;
+  width: 50%; /* Ajusta según tus necesidades */
+  padding-top: 18px;
+}
+
+.logoImg {
+  float: left;
+  width: 50%; /* Ajusta según tus necesidades */
+}
+
+@media (max-width: 430px) {
+  
+  .logo {
+    overflow: visible;  /* Clearfix para contener elementos flotantes */
+  }
+
+  .logoImg {
+    float: left;
+    width: 50%; /* Ajusta según tus necesidades */
+    padding-top: 10px;
+  }
 }
