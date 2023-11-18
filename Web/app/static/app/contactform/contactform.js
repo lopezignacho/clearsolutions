@@ -92,9 +92,10 @@ jQuery(document).ready(function($) {
     else var str = $(this).serialize();
     $.ajax({
       type: "POST",
-      url: "contactform/contactform.php",
+      url: "/contacto/",
       data: str,
       success: function(msg) {
+        
         // alert(msg);
         if (msg == 'OK') {
           $("#sendmessage").addClass("show");
@@ -105,7 +106,7 @@ jQuery(document).ready(function($) {
           $("#errormessage").addClass("show");
           $('#errormessage').html(msg);
         }
-
+        location.reload(true);
       }
     });
     return false;
