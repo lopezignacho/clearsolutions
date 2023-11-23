@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>BizPage Bootstrap Template</title>
+  <title>ClearIT</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -23,20 +23,14 @@
   <link href="{% static 'app/lib/animate/animate.min.css' %}" rel="stylesheet">
   <link href="{% static 'app/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
   <link href="{% static 'app/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-  <link href="{% static 'app/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
 
   {% load static %}
   <!-- Main Stylesheet File -->
   <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
   <link rel="stylesheet" href="{% static 'app/css/cardService.css' %}">
   
-
-  <!-- =======================================================
-    Theme Name: BizPage
-    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 
     {% block contenido  %}
     {% endblock %}
@@ -48,7 +42,12 @@
     ============================-->
     <header id="header">
       <div class="container-fluid">
-  
+        <div id="logo" class="pull-left">
+          <h1><a href="{% url 'home' %}" class="scrollto">ClearIT</a></h1>
+        </div>
+        
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>
         <div id="logo" class="pull-left logo">
         
          
@@ -64,7 +63,7 @@
         
         </div>
   
-
+        -->
 
 
 
@@ -114,61 +113,53 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
-          <div class="col-lg-4 col-md-6 footer-info">
-            <h3>BizPage</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
-          </div>
-
+          
           <div class="col-lg-4 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>ENLACES ÚTILES</h4>
             <ul>
               <li><i class="ion-ios-arrow-right"></i> <a href="{% url 'home' %}#intro">Inicio</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="{% url 'about' %}">Acerca de Nosotros</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="{% url 'servicios' %}#servicios">Servicios</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Condiciones de servicio</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Política de privacidad</a></li>
             </ul>
           </div>
-
+          
           <div class="col-lg-4 col-md-6 footer-contact">
             <h4>Contacténos</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              Chile <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
               <strong>Email:</strong> clearsolutions@gmail.com<br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
             </p>
 
             <div class="social-links">
-              <a href="https://www.instagram.com/clearitsolutions/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+              <h4>Redes sociales</h4>
+              <a href="https://www.instagram.com/clearit.cl/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.facebook.com/clearitcl" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
               <!--
-                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
               -->
             </div>
           </div>
-
-          <!-- SECCION SUSCRIBETE A NUESTRAS NOTICIAS 
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+          
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Nuestro boletín</h4>
+            <p>Suscríbete ahora para recibir actualizaciones exclusivas, consejos estratégicos y oportunidades emocionantes.</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit"  value="Subscribe">
+              <input type="email" name="email"><input type="submit"  value="Suscribirse">
             </form>
           </div>
-          -->
-
+          
+        
         </div>
       </div>
     </div>
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>ClearSolutions</strong>. Todos los derechos reservados
+        &copy; Copyright <strong>ClearIT</strong>. Todos los derechos reservados
       </div>
     </div>
   </footer><!-- #footer -->
@@ -189,13 +180,14 @@
   <script src="{% static 'app/lib/counterup/counterup.min.js' %}"></script>
   <script src="{% static 'app/lib/owlcarousel/owl.carousel.min.js' %}"></script>
   <script src="{% static 'app/lib/isotope/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'app/lib/lightbox/js/lightbox.min.js' %}"></script>
+
   <script src="{% static 'app/lib/touchSwipe/jquery.touchSwipe.min.js' %}"></script>
   <!-- Contact Form JavaScript File -->
   <script src="{% static 'app/contactform/contactform.js' %}"></script>
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'app/js/main.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 
   {% endblock %}

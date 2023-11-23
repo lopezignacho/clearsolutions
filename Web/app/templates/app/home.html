@@ -14,13 +14,19 @@
                   
                   <div class="carousel-item active">
                     <div class="carousel-container">
-                      <!-- Imagen para pantallas grandes (desktop) -->
-                      <img class="img-large" srcset="{% static 'app/img/intro-carousel/4.jpg' %}" alt="Descripción de la imagen para pantallas grandes"></img>
-                  
-                      <!-- Imagen para dispositivos móviles -->
-                      <img class="img-small" srcset="{% static 'app/img/intro-carousel/4-mobile.jpg' %}" alt="Descripción de la imagen para dispositivos móviles"></img>
+                    <div class="carousel-content">
+                      <!-- Video para pantallas grandes -->
+                      <video autoplay loop muted playsinline id="video-large" poster="{% static 'app/img/intro-carousel/video-2-poster.jpg' %}">
+                          <source src="{% static 'app/img/intro-carousel/sitioweb-desktop.mp4' %}" type="video/mp4">
+                      </video>
+
+                      <!-- Video para dispositivos móviles -->
+                      <video autoplay loop muted playsinline id="video-small" poster="{% static 'app/img/intro-carousel/historia-poster.jpg' %}">
+                          <source src="{% static 'app/img/intro-carousel/sitio-web.mp4' %}" type="video/mp4">
+                      </video>
                     </div>
                   </div>
+                </div>
 
                   <div class="carousel-item">
                     <div class="carousel-container">
@@ -81,21 +87,21 @@
           <div class="row">
   
             <div class="col-lg-4 box">
-              <i class="ion-ios-bookmarks-outline"></i>
-              <h4 class="title"><a href="">Lorem Ipsum Delino</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <i class="ion-paper-airplane" style="color: #ffca00"></i>
+              <h4 class="title"><a href="">Soluciones Responsivas</a></h4>
+              <p class="description">Desarrollamos paginas completamente compatibles con la visualización mobile para distintos dispositivos</p>
             </div>
   
             <div class="col-lg-4 box box-bg">
-              <i class="ion-ios-stopwatch-outline"></i>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <i class="ion-ios-stopwatch-outline" style="color: greenyellow"></i>
+              <h4 class="title"><a href="">Tiempos Verdaderos</a></h4>
+              <p class="description">Planificamos meticulosamente todas las actividades agendadas para lograr una entrega sin retrasos en los plazos comprometidos </p>
             </div>
   
             <div class="col-lg-4 box">
-              <i class="ion-ios-heart-outline"></i>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <i class="ion-ios-heart-outline" style="color: #ed143d;"></i>
+              <h4 class="title"><a href="">Soluciones pensadas para ti</a></h4>
+              <p class="description">En clearIT te asesoramos de una manera profesional, con el objetivo de brindar la mejor solución para tu negocio</p>
             </div>
   
           </div>
@@ -107,9 +113,9 @@
       ============================-->
       <section id="call-to-action" class="wow fadeIn">
         <div class="container text-center">
-          <h3>Call To Action</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
+          <h3>Llamado a la Acción!</h3>
+          <p> Si desea realizar alguna consulta, cotización sobre nuestros servicios, no dude en escribirnos mediante nuestro formulario de contacto, nuestro personal se pondra en contacto con usted lo antes posible!</p>
+          <a class="cta-btn" href="{% url 'contacto' %}">Contáctenos</a>
         </div>
       </section><!-- #call-to-action -->
   
@@ -120,33 +126,35 @@
         <div class="container">
   
           <header class="section-header">
-            <h3 class="section-title">Our Portfolio</h3>
+            <h3 class="section-title">Nuestro Portafolio</h3>
           </header>
   
           <div class="row">
             <div class="col-lg-12">
               <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-app">App</li>
-                <li data-filter=".filter-card">Card</li>
+                <li data-filter="*" class="filter-active">Todo</li>
+                <li data-filter=".filter-app">Hardware</li>
+                <!-- <li data-filter=".filter-card">Card</li> -->
                 <li data-filter=".filter-web">Web</li>
               </ul>
             </div>
           </div>
   
           <div class="row portfolio-container">
-  
             <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
               <div class="portfolio-wrap">
                 <figure>
-                  <img src="{% static 'app/img/portfolio/app1.jpg' %}" class="img-fluid" alt="">
-                  <a href="{% static 'app/img/portfolio/app1.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                  <img src="{% static 'app/img/portfolio/pc1.0.jpg' %}" class="img-fluid" alt="">
+                  <a href="{% static 'app/img/portfolio/pc1.0.jpg' %}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'app/img/portfolio/pc1.1.jpg'%}" data-lightbox="portfolio"></a>
+                  <a href="{% static 'app/img/portfolio/pc1.2.jpg'%}" data-lightbox="portfolio"></a>
+                  <a href="{% static 'app/img/portfolio/pc1.3.jpg'%}" data-lightbox="portfolio"></a>
+                  <a href="{% static 'app/img/portfolio/pc1.4.jpg'%}" data-lightbox="portfolio"></a>
                 </figure>
   
                 <div class="portfolio-info">
-                  <h4><a href="#">App 1</a></h4>
-                  <p>App</p>
+                  <h4><a href="#">Armado de equipo</a></h4>
+                  <p>Hardware</p>
                 </div>
               </div>
             </div>
@@ -154,14 +162,22 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
               <div class="portfolio-wrap">
                 <figure>
-                  <img src="{% static 'app/img/portfolio/web3.jpg' %}" class="img-fluid" alt="">
-                  <a href="{% static 'app/img/portfolio/web3.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                  <!-- Video para pantallas grandes -->
+                  <video autoplay loop muted playsinline id="video-large" style="padding-top: 9%;">
+                    <source src="{% static 'app/img/busacVideo.mp4' %}" type="video/mp4">
+                  </video>
+
+                  <!-- Video para dispositivos móviles -->
+                  <video autoplay loop muted playsinline id="video-small">
+                    <source src="{% static 'app/img/busacVideo.mp4' %}" type="video/mp4">
+                </video>
+                  <a href="http://www.busac.cl" class="link-details" title="Visitar Sitio Web"><i class="ion ion-android-open"></i></a>
+
                 </figure>
   
                 <div class="portfolio-info">
-                  <h4><a href="#">Web 3</a></h4>
-                  <p>Web</p>
+                  <h4><a href="#">Desarrollo Landing</a></h4>
+                  <p>BUSAC.CL</p>
                 </div>
               </div>
             </div>
@@ -169,18 +185,69 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
               <div class="portfolio-wrap">
                 <figure>
-                  <img src="{% static 'app/img/portfolio/app2.jpg' %}" class="img-fluid" alt="">
-                  <a href="{% static 'app/img/portfolio/app2.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                  <img src="{% static 'app/img/portfolio/pc2.0.webp' %}" class="img-fluid" alt="">
+                  <a href="{% static 'app/img/portfolio/pc2.0.webp' %}" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'app/img/portfolio/pc2.1.webp' %}" data-lightbox="portfolio"></a>
+                  <a href="{% static 'app/img/portfolio/pc2.2.webp' %}" data-lightbox="portfolio"></a>
+                  <a href="{% static 'app/img/portfolio/pc2.3.webp' %}" data-lightbox="portfolio"></a>
                 </figure>
-  
+            
                 <div class="portfolio-info">
-                  <h4><a href="#">App 2</a></h4>
-                  <p>App</p>
+                  <h4><a href="#">Armado de equipo</a></h4>
+                  <p>Hardware</p>
                 </div>
               </div>
             </div>
+            
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+              <div class="portfolio-wrap">
+                <figure>
+                  <img src="{% static 'app/img/portfolio/pc3.0.jpg' %}" class="img-fluid" alt="">
+                  <a href="{% static 'app/img/portfolio/pc3.0.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'app/img/portfolio/pc3.1.jpg' %}" data-lightbox="portfolio"></a>
+                  <a href="{% static 'app/img/portfolio/pc3.2.jpg' %}" data-lightbox="portfolio"></a>
+                </figure>
   
+                <div class="portfolio-info">
+                  <h4><a href="#">Armado de equipo</a></h4>
+                  <p>Hardware</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+              <div class="portfolio-wrap">
+                <figure>
+                  <img src="{% static 'app/img/portfolio/pc4.0.jpg' %}" class="img-fluid" alt="">
+                  <a href="{% static 'app/img/portfolio/pc4.0.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'app/img/portfolio/pc4.1.jpg' %}" data-lightbox="portfolio"></a>
+                </figure>
+  
+                <div class="portfolio-info">
+                  <h4><a href="#">Armado de equipo</a></h4>
+                  <p>Hardware</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+              <div class="portfolio-wrap">
+                <figure>
+                  <img src="{% static 'app/img/portfolio/pc5.0.jpg' %}" class="img-fluid" alt="">
+                  <a href="{% static 'app/img/portfolio/pc5.0.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{% static 'app/img/portfolio/pc5.1.jpg' %}" data-lightbox="portfolio"></a>
+                  <a href="{% static 'app/img/portfolio/pc5.2.jpg' %}" data-lightbox="portfolio"></a>
+                  <a href="{% static 'app/img/portfolio/pc5.3.jpg' %}" data-lightbox="portfolio"></a>
+                </figure>
+  
+                <div class="portfolio-info">
+                  <h4><a href="#">Armado de equipo</a></h4>
+                  <p>Hardware</p>
+                </div>
+              </div>
+            </div>
+
+          <!--  
             <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
               <div class="portfolio-wrap">
                 <figure>
@@ -195,7 +262,7 @@
                 </div>
               </div>
             </div>
-  
+           
             <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
               <div class="portfolio-wrap">
                 <figure>
@@ -210,22 +277,8 @@
                 </div>
               </div>
             </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-              <div class="portfolio-wrap">
-                <figure>
-                  <img src="{% static 'app/img/portfolio/app3.jpg' %}" class="img-fluid" alt="">
-                  <a href="{% static 'app/img/portfolio/app3.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </figure>
-  
-                <div class="portfolio-info">
-                  <h4><a href="#">App 3</a></h4>
-                  <p>App</p>
-                </div>
-              </div>
-            </div>
-  
+  -->
+  <!-- 
             <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
               <div class="portfolio-wrap">
                 <figure>
@@ -270,7 +323,7 @@
                 </div>
               </div>
             </div>
-  
+  -->
           </div>
   
         </div>
